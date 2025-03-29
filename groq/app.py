@@ -75,7 +75,7 @@ def process_docs():
 
         # Initialize LLM with Guardrails
         llm = ChatGroq(
-            groq_api_key=groq_api_key,
+            groq_api_key = st.secrets["GROQ_API_KEY"],
             model_name="llama3-70b-8192",
             temperature=0.3
         )
