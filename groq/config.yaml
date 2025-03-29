@@ -1,0 +1,23 @@
+models:
+  - type: main
+    engine: langchain
+    model: "groq-llama3"
+
+rails:
+  input:
+    flows:
+      - check jailbreak
+      - check sensitive topics
+
+  output:
+    flows:
+      - self check facts
+      - filter harmful content
+
+colang_version: "2.x"
+
+# Define allowed topics (only document-related queries)
+topics:
+  - ask about documents
+  - summarize content
+  - extract information
